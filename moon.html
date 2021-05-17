@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallex site</title>
+    <link rel="stylesheet" type="text/css" href="niomi.css">
+</head>
+
+<body>
+    <header>
+        <a href='#' class="logo">Logo</a>
+        <ul>
+            <li><a href='#' class="active">home</a></li>
+            <li><a href='#'>main</a></li>
+            <li><a href='#'>jobs</a></li>
+            <li><a href='#'>contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="mountains_front.png" id="mountains_front">
+
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax scrolling</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus assumenda, molestiae eveniet<br><br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis distinctio amet aut sit quas obcaecati
+            vero aspernatur totam fugit nobis, eos laudantium ea perspiciatis voluptatum fugiat dolores expedita, odio
+            minus.<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum porro praesentium voluptas quo
+            repudiandae delectus repellat omnis laborum rerum ut. Ducimus saepe expedita assumenda veniam debitis ullam
+            aut adipisci esse?<br><br>
+            perspiciatis autem velit eligendi architecto quas ea laboriosam cupiditate repellendus impedit vel
+            suscipit?<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ad nemo soluta, mollitia
+            totam quo eos voluptatem expedita iure eius aliquam dignissimos aperiam id hic atque earum quis provident
+            nam?<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam modi maiores esse itaque est
+            dolor beatae fuga, assumenda iusto id voluptatem, provident dignissimos exercitationem debitis architecto
+            eos consectetur reprehenderit optio?<br><br>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate quisquam ipsum enim architecto rerum,
+            temporibus, earum unde expedita nostrum nemo aliquam officiis. Tempore quia eum exercitationem facilis eius
+            illum necessitatibus.<br><br>
+            Blanditiis dicta id libero aspernatur.<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
+            aspernatur consectetur! Ab recusandae dolor labore fugiat doloribus. Nisi, obcaecati earum. Dignissimos
+            sapiente ut magnam dolore rem culpa, illum dolorem quisquam.<br><br>Lorem ipsum dolor sit amet,
+            consectetur<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia exercitationem excepturi, quod
+            commodi reiciendis debitis repudiandae dolorum minus perferendis modi maxime in accusamus ex. Quidem nihil
+            tenetur repudiandae quas pariatur?<br>
+            adipisicing elit. Est ad fugit ducimus sint soluta perspiciatis repellat, necessitatibus tempore libero
+            facere aut inventore optio illo corporis culpa non aliquid accusantium. Delectus.<br><br>Lorem ipsum dolor
+            sit
+            amet, consectetur adipisicing elit. Distinctio consequuntur, temporibus nesciunt maxime sed repellendus
+            voluptates eos tempora impedit ea dolorem blanditiis odit tenetur nam praesentium sapiente voluptatibus
+            expedita hic.<br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos incidunt, doloribus quisquam
+            ipsa eius eveniet voluptas nam quam corrupti quidem beatae optio temporibus praesentium tempore neque
+            dignissimos fugiat repellat consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+            dolor maiores, illo ipsa ea quisquam excepturi rem doloribus illum! Hic optio explicabo ullam consequatur
+            assumenda laborum at ipsam distinctio sapiente!<br>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Perspiciatis, eveniet earum aliquid ratione assumenda id sint cum odit natus ut harum, pariatur fugit quasi
+            distinctio. Ducimus assumenda aut aperiam excepturi!</p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+
+        })
+    </script>
+
+</body>
+
+</html>
