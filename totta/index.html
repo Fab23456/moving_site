@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Fadein video</title>
+    <link rel="stylesheet"   href="style.css">
+</head>
+<body>
+    <section>
+        <video src="mi.mp4" autoplay="" muted ="" loop =""></video>
+    </section>
+    <section>
+        <div class="content">
+            <h2>Fadeout Video Background On Scroll</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic  totam, qui architecto recusandae quia odit
+                dolore possimus consequuntur impedit odio voluptates dicta nemo, magnam inventore accusamus magni eum
+                quo non. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus dolor quam ratione
+                adipisci, sint facere, porro ipsum error eos similique pariatur, sed expedita sunt excepturi repellat
+                nihil quae. Illum, et ipsum exercitationem fuga dicta veniam molestiae suscipit laborum perspiciatis
+                voluptatibus ipsa maiores quam voluptatum, accusamus neque cumque sed ratione? Veniam a consequuntur
+                optio voluptates quae, cum eaque temporibus reprehenderit, non facere laborum tempora? Tenetur ea
+                sapiente neque cumque, nesciunt nihil vitae qui, eaque dolor eius, adipisci voluptatem odio officia
+                possimus. Sapiente eaque corrupti tenetur ut, sed eveniet distinctio odit debitis accusamus ipsa sequi
+                iure quas officiis assumenda numquam nemo perferendis at ipsam ullam minima ab eligendi voluptate quam.
+                Deserunt repellat, dolores facilis perferendis est id iusto quibusdam atque adipisci inventore
+                voluptatibus sit tenetur rem rerum unde, minima placeat eum, alias porro aut. Quaerat magni a, beatae
+                nobis officia aperiam amet enim dolorum? Ipsa iusto odit ex dolor iste tempora iure reiciendis repellat
+                consequuntur, voluptates at, voluptatum unde vero delectus sit aut tempore quo aliquam dolore vel
+                numquam necessitatibus provident nulla. Animi repellat iusto beatae minus nesciunt minima tempora
+                officia repellendus tenetur. Temporibus minus deserunt atque architecto, in blanditiis id possimus
+                quaerat aperiam magni dolor cumque deleniti nostrum impedit quae sit!
+            </p>
+        </div>
+
+    </section>
+    <script type="text/javascript">
+        let video = document.querySelector('video');
+        window.addEventListener('scroll', function () {
+            let value = 1 + window.scrollY / -600;
+            video.style.opacity = value;
+        })
+    </script>
+</body>
+
+</html>
